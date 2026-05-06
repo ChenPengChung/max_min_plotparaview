@@ -321,11 +321,11 @@ def build_legend_panel(ax_leg, extrema, k_center, nz):
     ax_leg.axis('off')
 
     # ---- 欄位 x 座標 (變數與 = 號靠近) ----
-    x_marker = 0.08
-    x_name   = 0.17
-    x_eq     = 0.46
-    x_val    = 0.50
-    x_unit   = 0.84
+    x_marker = 0.12
+    x_name   = 0.21
+    x_eq     = 0.50
+    x_val    = 0.54
+    x_unit   = 0.88
 
     # ---- 各區段定義 ----
     sections = [
@@ -359,13 +359,13 @@ def build_legend_panel(ax_leg, extrema, k_center, nz):
         # ---- 區段分隔線 (與標題保持距離) ----
         if s_idx > 0:
             sep_y = y + sec_gap * 0.50
-            ax_leg.plot([0.06, 0.94], [sep_y, sep_y],
+            ax_leg.plot([0.10, 0.94], [sep_y, sep_y],
                         color=[0.45, 0.45, 0.45], linewidth=0.8)
 
         # ---- 標題 (置中) + 左右裝飾線 ----
-        ax_leg.text(0.50, y, sec_title,
+        ax_leg.text(0.52, y, sec_title,
                     fontsize=fs, ha='center', va='center')
-        ax_leg.plot([0.04, 0.15], [y, y],
+        ax_leg.plot([0.08, 0.19], [y, y],
                     color=[0.5, 0.5, 0.5], linewidth=0.6)
         ax_leg.plot([0.85, 0.96], [y, y],
                     color=[0.5, 0.5, 0.5], linewidth=0.6)
@@ -373,7 +373,7 @@ def build_legend_panel(ax_leg, extrema, k_center, nz):
 
         # ---- 線段圖例 (加長) ----
         lbl, lc, la = line_info[sec_key]
-        ax_leg.plot([x_marker - 0.04, x_marker + 0.10],
+        ax_leg.plot([x_marker - 0.02, x_marker + 0.10],
                     [y, y],
                     color=lc, linewidth=3.5, alpha=la,
                     solid_capstyle='round')
@@ -436,7 +436,7 @@ def plot_yz_plane(vtk_file, summary_file, i_index, output_path):
 
     fig = plt.figure(figsize=IMG_SIZE)
     fig.patch.set_facecolor(BG_COLOR)
-    gs = gridspec.GridSpec(1, 2, width_ratios=[2.4, 1], wspace=0.05)
+    gs = gridspec.GridSpec(1, 2, width_ratios=[2.2, 1], wspace=0.08)
 
     ax_main = fig.add_subplot(gs[0])
     ax_leg  = fig.add_subplot(gs[1])
@@ -461,7 +461,7 @@ def plot_yz_plane(vtk_file, summary_file, i_index, output_path):
 
     build_legend_panel(ax_leg, extrema, k_center, nz)
 
-    fig.subplots_adjust(left=0.05, right=0.98, top=0.94, bottom=0.08, wspace=0.04)
+    fig.subplots_adjust(left=0.05, right=0.98, top=0.94, bottom=0.08, wspace=0.08)
     plt.savefig(output_path, dpi=IMG_DPI,
                 facecolor=fig.get_facecolor())
     plt.close()
