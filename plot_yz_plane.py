@@ -471,8 +471,8 @@ def plot_yz_plane(vtk_file, summary_file, i_index, output_path):
 
 
 if __name__ == "__main__":
-    vtk_file     = sys.argv[1] if len(sys.argv) > 1 else r"input\1.Re1400_129x257x129_v2.vtk"
-    summary_file = sys.argv[2] if len(sys.argv) > 2 else r"input\14.Re1400_zplus_summary.txt"
+    vtk_file     = sys.argv[1] if len(sys.argv) > 1 else r"input\1.Re5600_129x257x129_v2.vtk"
+    summary_file = sys.argv[2] if len(sys.argv) > 2 else r"input\14.Re5600_zplus_summary.txt"
     i_idx        = int(sys.argv[3]) if len(sys.argv) > 3 else 0
     out_file     = sys.argv[4] if len(sys.argv) > 4 else r"output\yz_plane_i0.png"
 

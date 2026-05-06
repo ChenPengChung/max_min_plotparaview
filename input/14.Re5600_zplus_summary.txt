@@ -4,9 +4,9 @@
 # tau_wall = niu * du_t/dn,  u_tau = sqrt(tau/rho)
 # Formula:  delta_*_plus = u_tau * delta_* / niu
 
-Re                  = 1400
-u_tau_global        = 6.541126530707e-04    # lattice friction velocity
-niu                 = 1.071428571429e-05    # = Uref/Re, lattice nu
+Re                  = 5600
+u_tau_global        = 3.843331796899e-04    # lattice friction velocity
+niu                 = 2.678571428571e-06    # = Uref/Re, lattice nu
 Nx                  = 129      # span (uniform)
 Ny                  = 257      # stream
 Nz                  = 129      # wall-normal
@@ -14,7 +14,7 @@ k_center            = 64       # = (Nz-1)/2
 
 # Uniform span spacing
 delta_x_avg         = 3.515625000000e-02    # uniform span = LX/(Nx-1)
-delta_x_plus        = 2.146307              # u_tau_global * delta_x / niu
+delta_x_plus        = 5.044373              # u_tau_global * delta_x / niu
 
 # ================================================================
 #  Full-grid extrema (over all j, k) -- reference
@@ -34,41 +34,41 @@ delta_y_min         = 1.958137100000e-02    at (j=62, k=64)  y=+2.0112049  z=+1.
 delta_z_max         = 3.113814950000e-02    at (j=70, k=64)  y=+2.1792957  z=+1.5178532
 delta_z_min         = 2.088075000000e-02    at (j=3, k=64)  y=+0.1065026  z=+2.0178603
 # Wall-unit spacings (u_tau_global constant -> same location as mesh spacing)
-delta_y_plus_max    = 3.171403    at (j=128, k=64)  y=+4.4982667  z=+1.5178566
-delta_y_plus_min    = 1.195453    at (j=62, k=64)  y=+2.0112049  z=+1.5334199
-delta_z_plus_max    = 1.901000    at (j=70, k=64)  y=+2.1792957  z=+1.5178532
-delta_z_plus_min    = 1.274781    at (j=3, k=64)  y=+0.1065026  z=+2.0178603
+delta_y_plus_max    = 7.453611    at (j=128, k=64)  y=+4.4982667  z=+1.5178566
+delta_y_plus_min    = 2.809621    at (j=62, k=64)  y=+2.0112049  z=+1.5334199
+delta_z_plus_max    = 4.467838    at (j=70, k=64)  y=+2.1792957  z=+1.5178532
+delta_z_plus_min    = 2.996062    at (j=3, k=64)  y=+0.1065026  z=+2.0178603
 
 # ================================================================
 #  Bottom Wall (k=0, zeta=0_bottom)
 # ================================================================
 # u_tau = u_tau_local(i,j) (varies along wall surface)
-u_tau_local_max     = 2.470246622511e-03    at (i=22, j=241, k=0)  x=+0.7734380  y=+8.6307329  z=+0.9423444
-u_tau_local_min     = 5.977925719333e-07    at (i=48, j=68, k=0)  x=+1.6875000  y=+1.8999507  z=+0.0004842
+u_tau_local_max     = 1.285052310628e-03    at (i=34, j=241, k=0)  x=+1.1953120  y=+8.6307329  z=+0.9423444
+u_tau_local_min     = 2.109534725454e-06    at (i=2, j=134, k=0)  x=+0.0703120  y=+4.8131323  z=+0.0000000
 # Mesh spacings at k=0, zeta=0_bottom
 delta_y_max         = 5.308375200000e-02    at (j=128, k=0)  y=+4.5000021  z=+0.0000000
 delta_y_min         = 2.454918980000e-02    at (j=16, k=0)  y=+0.3938410  z=+0.9288693
 delta_z_max         = 1.323470285476e-02    at (j=70, k=0)  y=+1.9698352  z=-0.0000068
 delta_z_min         = 8.874982000000e-03    at (j=3, k=0)  y=+0.0738279  z=+1.0000074
 # Wall-unit spacings (u_tau_local -> 3D extremum search)
-delta_y_plus_max    = 5.672475    at (i=22, j=241, k=0)  x=+0.7734380  y=+8.6307329  z=+0.9423444
-delta_y_plus_min    = 0.001934    at (i=48, j=68, k=0)  x=+1.6875000  y=+1.8999507  z=+0.0004842
-delta_z_plus_max    = 2.104143    at (i=22, j=241, k=0)  x=+0.7734380  y=+8.6307329  z=+0.9423444
-delta_z_plus_min    = 0.000738    at (i=48, j=68, k=0)  x=+1.6875000  y=+1.8999507  z=+0.0004842
+delta_y_plus_max    = 11.803563    at (i=34, j=241, k=0)  x=+1.1953120  y=+8.6307329  z=+0.9423444
+delta_y_plus_min    = 0.036453    at (i=64, j=193, k=0)  x=+2.2500000  y=+7.2703452  z=+0.0228604
+delta_z_plus_max    = 4.378404    at (i=34, j=241, k=0)  x=+1.1953120  y=+8.6307329  z=+0.9423444
+delta_z_plus_min    = 0.010423    at (i=2, j=134, k=0)  x=+0.0703120  y=+4.8131323  z=+0.0000000
 
 # ================================================================
 #  Top Wall (k=128, zeta=0_top)
 # ================================================================
 # u_tau = u_tau_local(i,j) (varies along wall surface)
-u_tau_local_max     = 7.564812728485e-04    at (i=79, j=255, k=128)  x=+2.7773440  y=+8.9546806  z=+3.0357132
-u_tau_local_min     = 3.739637367707e-04    at (i=45, j=134, k=128)  x=+1.5820310  y=+4.8038305  z=+3.0357132
+u_tau_local_max     = 4.609046184284e-04    at (i=90, j=54, k=128)  x=+3.1640620  y=+1.9066515  z=+3.0357132
+u_tau_local_min     = 2.782985167845e-04    at (i=14, j=120, k=128)  x=+0.4921880  y=+4.0980597  z=+3.0357132
 # Mesh spacings at k=128, zeta=0_top
 delta_y_max         = 5.177911650000e-02    at (j=127, k=128)  y=+4.4499512  z=+3.0357132
 delta_y_min         = 1.912955750000e-02    at (j=193, k=128)  y=+6.9140621  z=+3.0357132
 delta_z_max         = 1.323470300000e-02    at (j=70, k=128)  y=+2.2291493  z=+3.0357132
 delta_z_min         = 8.874982000000e-03    at (j=3, k=128)  y=+0.1299317  z=+3.0357132
 # Wall-unit spacings (u_tau_local -> 3D extremum search)
-delta_y_plus_max    = 3.198568    at (i=80, j=0, k=128)  x=+2.8125000  y=-0.0000000  z=+3.0357132
-delta_y_plus_min    = 1.016654    at (i=124, j=192, k=128)  x=+4.3593750  y=+6.8949297  z=+3.0357132
-delta_z_plus_max    = 0.840264    at (i=113, j=62, k=128)  x=+3.9726560  y=+2.0673203  z=+3.0357132
-delta_z_plus_min    = 0.461934    at (i=45, j=134, k=128)  x=+1.5820310  y=+4.8038305  z=+3.0357132
+delta_y_plus_max    = 7.672685    at (i=38, j=0, k=128)  x=+1.3359380  y=-0.0000000  z=+3.0357132
+delta_y_plus_min    = 2.846929    at (i=1, j=193, k=128)  x=+0.0351560  y=+6.9140621  z=+3.0357132
+delta_z_plus_max    = 2.231960    at (i=90, j=63, k=128)  x=+3.1640620  y=+2.0864506  z=+3.0357132
+delta_z_plus_min    = 1.365361    at (i=29, j=246, k=128)  x=+1.0195310  y=+8.5957855  z=+3.0357132

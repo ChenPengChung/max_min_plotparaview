@@ -183,7 +183,7 @@ def parse_zplus_summary(filepath):
 # VTK 檔案路徑
 # ============================================================
 script_dir = os.path.dirname(os.path.abspath(__file__)) if '__file__' in dir() else os.getcwd()
-vtk_path = os.path.join(script_dir, "input", "1.Re1400_129x257x129_v2.vtk")
+vtk_path = os.path.join(script_dir, "input", "1.Re5600_129x257x129_v2.vtk")
 if not os.path.isfile(vtk_path):
     raise FileNotFoundError("找不到 %s" % vtk_path)
 print("Loading: %s" % vtk_path)

@@ -289,7 +289,7 @@ if __name__ == "__main__":
 
     raw_img  = sys.argv[1] if len(sys.argv) > 1 else str(SCRIPT_DIR / "output" / "outline_walls_raw.png")
     proj     = sys.argv[2] if len(sys.argv) > 2 else str(SCRIPT_DIR / "output" / "extrema_projected.json")
-    summary  = sys.argv[3] if len(sys.argv) > 3 else str(SCRIPT_DIR / "input"  / "14.Re1400_zplus_summary.txt")
+    summary  = sys.argv[3] if len(sys.argv) > 3 else str(SCRIPT_DIR / "input"  / "14.Re5600_zplus_summary.txt")
     out_file = sys.argv[4] if len(sys.argv) > 4 else str(SCRIPT_DIR / "output" / "outline_walls.png")
 
     Path(out_file).parent.mkdir(parents=True, exist_ok=True)
