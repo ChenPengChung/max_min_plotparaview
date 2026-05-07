@@ -13,8 +13,8 @@ _*_wall_grid.vtk
 # Large input data (VTK mesh)
 input/*.vtk
 
-# Output images (regenerable)
-output/
+# Output JSON (regenerable)
+output/*.json
 
 # Claude Code
 .claude/
